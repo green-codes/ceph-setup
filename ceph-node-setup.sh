@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # usage
-if [[ $# -lt 1 ]] ; then echo -e "Usage: $0 <user@hosts>...\nInitlalizes the ceph account on target hosts, requires an existing sudo user"; exit -1; fi
+if [[ $# -lt 1 ]] ; then echo -e "Usage: $0 <user@hosts>...\nSet up password-less ssh for existing sudo users on each specified node"; exit -1; fi
 
 # must NOT execute as the ceph user
 if [[ `whoami` == "ceph" ]] ; then echo "Cannot execute as the ceph user!"; exit -1; fi

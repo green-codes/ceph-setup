@@ -20,3 +20,6 @@ ceph-deploy admin $@
 
 # deploy manager deamon
 ceph-deploy mgr create $1
+
+echo -e "Now add OSDs to the ceph cluster to complete setup."
+echo -e "Create an MDS if CephFS is needed."

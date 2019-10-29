@@ -1,0 +1,12 @@
+First run ./ceph-deploy-setup.sh to install ceph-deploy in the current node.
+
+Then, ./ceph-node-setup.sh <user@node>... to do preflight tasks on each node.
+
+Then, ./ceph-cluster-bootstrap.sh <user@node>... to bootstrap ceph.
+The first node is used as the master node.
+
+If necessary, install ceph client with ./ceph-install.sh
+
+After bootstrapping is complete, add OSDs to the cluster. 
+We can now proceed to create pools for storage applications. 
+Note that Kubernetes doesn't need a CephFS setup; a pool is sufficient. 

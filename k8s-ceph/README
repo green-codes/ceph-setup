@@ -1,0 +1,4 @@
+Run ./rbd-bootstrap.sh <ceph-monitor-ip:port> to setup ceph storage in Kubernetes
+NOTE: need kube-admin access to the kube cluster
+
+Afterwards, use rbd-pvc.yaml as a template to create ceph-based PVCs. 

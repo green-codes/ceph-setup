@@ -11,11 +11,9 @@ if [[ ! -f ~/.ssh/id_rsa ]]; then ssh-keygen; fi
 
 for i in ${@}; do
 
-    # setup password-less ssh
     ssh-copy-id $i
-    ssh -t $i -- bash < ceph-node-setup-account.sh;
-
-    # execute setup script
-    ssh -t $i -- bash < ceph-node-setup-local.sh;
+    ssh -t $i -- "cd ~ && git clone https://github.com/green-codes/ceph-setup.git"
+    ssh -t $i -- "bash ~/ceph-setup/ceph-node-setup-account.sh"
+    ssh -t $i -- "bash ~/ceph-setup/ceph-node-setup-local.sh"
 
 done

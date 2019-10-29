@@ -1,7 +1,7 @@
 
 # install NTP and python
 sudo apt-get update
-sudo apt-get install ntp python-minimal
+sudo apt-get install -y ntp python-minimal
 
 # firewall
 sudo ufw allow 6789/tcp

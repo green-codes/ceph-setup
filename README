@@ -7,5 +7,8 @@ The first node is used as the master node.
 
 If necessary, install ceph client with ./ceph-install.sh
 
-After bootstrapping is complete, add OSDs to the cluster. Proceed to create pools for storage applications. 
+After bootstrapping is complete, add OSDs to the cluster:
+ceph-deploy osd create --data {device} {ceph-node}
+
+Proceed to create pools for storage applications. 
 Note that Kubernetes doesn't need a CephFS setup; a pool is sufficient. 

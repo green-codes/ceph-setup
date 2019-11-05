@@ -1,5 +1,6 @@
 sudo ceph --cluster ceph osd pool create kube 32 32
 sudo ceph --cluster ceph auth get-or-create client.kube mon 'allow r' osd 'allow rwx pool=kube'
+sudo rbd pool init kube
 
 KEY=`sudo ceph --cluster ceph auth get-key client.kube`
 echo -e "\nUse the following to create a kube secret for the 'kube' pool in ceph\n"

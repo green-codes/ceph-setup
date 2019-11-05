@@ -1,6 +1,6 @@
 #
 
-if [[ $# -lt 1 ]]; echo "Usage: $0 <master-node> [<nodes>...]"; exit -1; fi
+if [[ $# -lt 1 ]]; then echo "Usage: $0 <master-node> [<nodes>...]"; exit -1; fi
 
 # create folder for configs and credentials
 mkdir ~/ceph-cluster

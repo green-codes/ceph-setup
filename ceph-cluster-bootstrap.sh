@@ -3,8 +3,8 @@
 if [[ $# -lt 1 ]]; echo "Usage: $0 <master-node> [<nodes>...]"; exit -1; fi
 
 # create folder for configs and credentials
-mkdir ceph-cluster
-cd ceph-cluster
+mkdir ~/ceph-cluster
+cd ~/ceph-cluster
 
 # create the cluster
 ceph-deploy new $1
